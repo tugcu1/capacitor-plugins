@@ -94,6 +94,7 @@ public class SharePlugin extends Plugin {
             }
 
             Intent intent = new Intent(files != null && files.length() > 1 ? Intent.ACTION_SEND_MULTIPLE : Intent.ACTION_SEND);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
             if (text != null) {
                 // If they supplied both fields, concat them
